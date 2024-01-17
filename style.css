@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@200;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+header {
+  background: #61daea;
+  position: relative;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo img {
+  display: block;
+  object-fit: cover;
+  width: 80px;
+}
+.logo span {
+  font-size: 27px;
+  color: #102951;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.navbar nav li {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+.navbar nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.7rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.4s ease-in;
+}
+
+.navbar nav li a:hover {
+  background: #102951;
+  color: #fff;
+}
+
+section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  height: 80vh;
+}
+.content h2 {
+  font-size: 6rem;
+  color: #102951;
+  font-family: "ubuntu", sans-serif;
+}
+
+.content p {
+  color: #102951;
+  line-height: 2;
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.content button {
+  display: block;
+  margin: 2rem 0;
+  width: 21%;
+  padding: 0.7rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 4px solid;
+  border: 1px solid #102951;
+  background: inherit;
+  color: #102951;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+.content button:hover,
+i:hover {
+  background: #61daea;
+}
+
+.content .social_icons {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  font-size: 1.9rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.content .social_icons i {
+  padding: 0.6rem;
+  color: #102951;
+  border-radius: 5px;
+  border: 1px solid #102951;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .btn {
+  font-size: 1.2rem;
+  color: #102951;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1058px) {
+  .container {
+    padding: 0 25px;
+  }
+  .content h2 {
+    font-size: 4rem;
+  }
+  .navbar nav li a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 902px) {
+  .navbar .btn {
+    display: block;
+  }
+  .navbar nav {
+    position: fixed;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 50vh;
+    top: 0;
+    right: -100%;
+    background: #61daea;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .navbar nav li {
+    margin: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+  }
+  .content button {
+    width: 50%;
+  }
+
+  .content .social_icons {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .navbar nav.active {
+    right: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    margin: 25px;
+  }
+
+  .content h2 {
+    font-size: 3.5rem;
+  }
+  .navbar nav li a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 562px) {
+  .content h2 {
+    font-size: 2.5rem;
+  }
+}
